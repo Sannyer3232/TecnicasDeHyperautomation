@@ -1,6 +1,10 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Triagem Inteligente" id="triagem-hr-bpmn">
+<<<<<<< HEAD
     <mxGraphModel dx="1037" dy="610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1169" math="0" shadow="0">
+=======
+    <mxGraphModel dx="1201" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 2ea00c3e6ab60b6066577e36c56403a3986309dc
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,17 +25,20 @@
         <mxCell id="sT-R3vxq-VW6Zg2_ZfoO-9" parent="lane_colab" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;" value="&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 8px;&quot;&gt;Atestado&lt;br&gt;Enviado&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="30" x="50" y="45" as="geometry" />
         </mxCell>
+        <mxCell id="task_erro" parent="lane_colab" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Notificar erro ao colaborador&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="240" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="end_erro" parent="lane_colab" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Rejeitado&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="40" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_erro_fim" edge="1" parent="lane_colab" source="task_erro" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end_erro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="lane_rpa" parent="pool_main" style="swimlane;html=1;startSize=40;horizontal=0;fontFamily=Times New Roman;fontSize=10;" value="ROBÔ RPA" vertex="1">
           <mxGeometry height="200" width="1700" y="160" as="geometry" />
         </mxCell>
         <mxCell id="task_monit" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Monitorar caixa e capturar arquivo&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="130" y="35" as="geometry" />
-        </mxCell>
-        <mxCell id="task_erro" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Notificar erro ao colaborador&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="90" x="240" y="130" as="geometry" />
-        </mxCell>
-        <mxCell id="end_erro" parent="lane_rpa" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Rejeitado&lt;/font&gt;" vertex="1">
-          <mxGeometry height="40" width="40" x="370" y="135" as="geometry" />
         </mxCell>
         <mxCell id="task_ocr" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Executar OCR e extrair dados&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="370" y="35" as="geometry" />
@@ -48,14 +55,11 @@
         <mxCell id="task_rec_api" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Receber previsão da API&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="1000" y="35" as="geometry" />
         </mxCell>
-        <mxCell id="end_baixo_risco" parent="lane_rpa" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Fim:&lt;br&gt;Risco Baixo&lt;/font&gt;" vertex="1">
-          <mxGeometry height="40" width="40" x="1310" y="25" as="geometry" />
-        </mxCell>
         <mxCell id="task_preagendar" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Pré-agendar check-in de saúde&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="1120" y="140" as="geometry" />
         </mxCell>
         <mxCell id="task_alerta" parent="lane_rpa" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Disparar alerta no Teams/Slack&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="90" x="1285" y="140" as="geometry" />
+          <mxGeometry height="50" width="90" x="1250" y="140" as="geometry" />
         </mxCell>
         <mxCell id="edge_monit_gw" edge="1" parent="lane_rpa" source="task_monit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
@@ -66,9 +70,6 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="285" y="85" as="sourcePoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="edge_erro_fim" edge="1" parent="lane_rpa" source="task_erro" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end_erro">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge_gw_ocr" edge="1" parent="lane_rpa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="task_ocr" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Sim&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
@@ -96,9 +97,10 @@
             <mxPoint x="1140" y="45" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge_risco_fim" edge="1" parent="lane_rpa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end_baixo_risco" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Não&lt;/font&gt;">
+        <mxCell id="edge_risco_fim" edge="1" parent="lane_rpa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.482;entryY=-0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="w6gpDIYn4kX8KqwDL9JL-1" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Não&lt;/font&gt;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1190" y="45" as="sourcePoint" />
+            <mxPoint x="1310" y="45" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge_risco_pre" edge="1" parent="lane_rpa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="task_preagendar" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Sim&lt;/font&gt;">
@@ -110,7 +112,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sT-R3vxq-VW6Zg2_ZfoO-2" parent="lane_rpa" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 8px;&quot; face=&quot;Times New Roman&quot;&gt;Formato é válido?&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="70" x="250" y="5" as="geometry" />
+          <mxGeometry height="30" width="70" x="250" y="85" as="geometry" />
         </mxCell>
         <mxCell id="sT-R3vxq-VW6Zg2_ZfoO-3" parent="lane_rpa" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;" value="" vertex="1">
           <mxGeometry height="50" width="50" x="260" y="35" as="geometry" />
@@ -132,6 +134,15 @@
         </mxCell>
         <mxCell id="task_digita" parent="lane_rh" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Digitação manual e validação visual&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="480" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="w6gpDIYn4kX8KqwDL9JL-3" edge="1" parent="lane_rh" source="w6gpDIYn4kX8KqwDL9JL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w6gpDIYn4kX8KqwDL9JL-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w6gpDIYn4kX8KqwDL9JL-1" parent="lane_rh" style="shape=mxgraph.bpmn.task2;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;fontFamily=Times New Roman;fontSize=8;" value="&lt;b&gt;Notifica o Analista&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="1410" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w6gpDIYn4kX8KqwDL9JL-2" parent="lane_rh" style="shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=general;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 8px;&quot;&gt;Fim:&lt;br&gt;Risco Baixo&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="40" x="1540" y="35" as="geometry" />
         </mxCell>
         <mxCell id="lane_ia" parent="pool_main" style="swimlane;html=1;startSize=40;horizontal=0;fontFamily=Times New Roman;fontSize=10;" value="DIALGA SYSTEM (IA)" vertex="1">
           <mxGeometry height="120" width="1700" y="480" as="geometry" />
